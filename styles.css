@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3f1f47;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+
+.container {
+    background: #602f6c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 72vw;
+    z-index: 1;
+}
+
+#closeBtn {
+    background-color: #3f1f47;
+    color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 600ms;
+    position: relative;
+    margin-left: 90%;
+}
+
+#closeBtn:hover {
+    background-color: #6c4775;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+#taskInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #041d8b;
+    border-radius: 4px;
+    transition: 600ms;
+}
+
+#addTaskBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #3f1f47;
+    color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 600ms;
+}
+
+#addTaskBtn:hover {
+    background-color: #6c4775;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #3f1f47;
+    border-radius: 4px;
+    margin-bottom: 1.3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    word-wrap: break-word; /* Перенос слов */
+    overflow-wrap: break-word; /* Перенос длинных слов */
+    white-space: normal; /* Разрешаем перенос текста */
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+li.dragging {
+    opacity: 0.5;
+    background-color: #e9ecef;
+}
+
+button.deleteBtn {
+    background-color: #d18189;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 10px; /* Отступ от текста задачи */
+    flex-shrink: 0; /* Запрещаем сжатие кнопки */
+}
+
+button.deleteBtn:hover {
+    background-color: #d2a0a5;
+}
+
+.drag-icon {
+    cursor: grab;
+    margin-right: 10px;
+    color: #6c757d;
+    user-select: none;
+}
+
+.drag-icon:active {
+    cursor: grabbing;
+}
+
+.task-text {
+    flex-grow: 1; /* Текст задачи занимает оставшееся пространство */
+    word-break: break-word; /* Перенос длинных слов */
+}
+
+#charCount {
+    font-size: 0.9em;
+    color: #eee;
+    margin-bottom: 10px;
+}
