@@ -26,7 +26,7 @@ body {
     z-index: 1;
 }
 
-.closeBtn {
+.close-btn {
     background-color: #3f1f47;
     color: #eee;
     border: none;
@@ -38,7 +38,7 @@ body {
     margin-left: 90%;
 }
 
-#closeBtn:hover {
+.close-btn:hover {
     background-color: #6c4775;
 }
 
