@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.Telegram && window.Telegram.WebApp) {
     const tg = window.Telegram.WebApp;
     tg.ready();
-    tg.expand();
 
     // Отображаем информацию о пользователе
     const user = tg.initDataUnsafe.user;
@@ -44,12 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Обработчик для кнопки закрытия
     document.getElementById('closeAppBtn').addEventListener('click', function() {
         tg.close(); // Закрываем Mini App
-    });
-    
-    // Развернем приложение на весь экран
-    ).addEventListener('click', () => {
-        tg.close();
-    });
+    })
   }
 
   // Counter
