@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Функция для сохранения задач в LocalStorage
-  // function saveTasks() {
-  //     localStorage.setItem('tasks', JSON.stringify(tasks));
-  // }
+  function saveTasks() {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
 
   // Обработчик события для кнопки добавления задачи
   addTaskBtn.addEventListener('click', addTask);
