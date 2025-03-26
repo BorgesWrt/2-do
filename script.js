@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.Telegram && window.Telegram.WebApp) {
     const tg = window.Telegram.WebApp;
     tg.ready();
+    tg.expand();
 
     // Отображаем информацию о пользователе
     const user = tg.initDataUnsafe.user;
@@ -22,30 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
         userInfo.innerHTML = `Привет, ${user.first_name}!`;
     }
 
-    // Показываем кнопку закрытия
-    document.getElementById('closeAppBtn').style.display = 'block';
-    
-    // Обработчик для кнопки закрытия
-    document.getElementById('closeAppBtn').addEventListener('click', function() {
-        tg.close(); // Закрываем Mini App
-    });
-    
-    // Развернём приложение на весь экран
-    tg.expand();
-    } else {
-        // Скрываем кнопку, если не в Telegram
-        document.getElementById('closeAppBtn').style.display = 'none';
-    }
-
     // Закрытие приложения
-    document.getElementById('closeBtn'document.getElementById('closeAppBtn').style.display = 'block';
-    
-    // Обработчик для кнопки закрытия
-    document.getElementById('closeAppBtn').addEventListener('click', function() {
-        tg.close(); // Закрываем Mini App
-    })
+    document.getElementById('closeBtn').addEventListener('click', () => {
+        tg.close();
+    });
   }
-
+  
   // Counter
   taskInput.addEventListener('input', function () {
     const remainingChars = 60 - taskInput.value.length;
@@ -124,9 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Функция для сохранения задач в LocalStorage
-  function saveTasks() {
-      localStorage.setItem('tasks', JSON.stringify(tasks));
-  }
+  // function saveTasks() {
+  //   localStorage.setItem('tasks', JSON.stringify(tasks));
+  // }
 
   // Обработчик события для кнопки добавления задачи
   addTaskBtn.addEventListener('click', addTask);
