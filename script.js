@@ -23,8 +23,31 @@ document.addEventListener('DOMContentLoaded', function () {
         userInfo.innerHTML = `Привет, ${user.first_name}!`;
     }
 
+    // Показываем кнопку закрытия
+    document.getElementById('closeAppBtn').style.display = 'block';
+    
+    // Обработчик для кнопки закрытия
+    document.getElementById('closeAppBtn').addEventListener('click', function() {
+        tg.close(); // Закрываем Mini App
+    });
+    
+    // Развернём приложение на весь экран
+    tg.expand();
+    } else {
+        // Скрываем кнопку, если не в Telegram
+        document.getElementById('closeAppBtn').style.display = 'none';
+    }
+
     // Закрытие приложения
-    document.getElementById('closeBtn').addEventListener('click', () => {
+    document.getElementById('closeBtn'document.getElementById('closeAppBtn').style.display = 'block';
+    
+    // Обработчик для кнопки закрытия
+    document.getElementById('closeAppBtn').addEventListener('click', function() {
+        tg.close(); // Закрываем Mini App
+    });
+    
+    // Развернем приложение на весь экран
+    ).addEventListener('click', () => {
         tg.close();
     });
   }
